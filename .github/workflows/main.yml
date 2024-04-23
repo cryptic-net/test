@@ -13,5 +13,13 @@ jobs:
       - uses: actions/checkout@master
       - uses: hashicorp/setup-terraform@v3
       - run: terraform -v
+      - run: ls -l
+      - run: echo test > test.file
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls -l
+      - run: cat test.file
       - name: Check Syntax
         run: terraform fmt -check -recursive -diff
