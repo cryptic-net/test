@@ -1,0 +1,8 @@
+name: "Test"
+
+on: [push]
+jobs:
+  apply:
+    name: Plan
+    steps:
+      - uses: actions/checkout@master
