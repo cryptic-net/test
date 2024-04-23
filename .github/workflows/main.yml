@@ -4,5 +4,8 @@ on: [push]
 jobs:
   apply:
     name: Plan
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - uses: hashicorp/setup-terraform@v3
+      - run: terraform -v
