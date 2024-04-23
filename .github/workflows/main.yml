@@ -13,3 +13,5 @@ jobs:
       - uses: actions/checkout@master
       - uses: hashicorp/setup-terraform@v3
       - run: terraform -v
+      - name: Check Syntax
+        run: terraform fmt -check -recursive -diff
